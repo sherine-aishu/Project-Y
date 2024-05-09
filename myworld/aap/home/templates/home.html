@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to Our Webinar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .content {
+            max-width: 1400px;
+            margin: auto;
+            text-align: center;
+	    text-indent: 0;
+        }
+	.highlight{
+		font-size: larger;
+		background-color: #FAAFBA; /* Added background color for highlight */
+	}
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div id="newbie_fresher" class="highlight"> 
+            <h1>Looking for a NO-CODE or LOW-CODE career domain in the IT industry?</h1>
+            <p>Are you apprehensive about coding?</p>
+            <p>Do you feel uncertain about programming?</p>
+            <p>Are you unsure about how to establish your career in the IT industry?</p>
+        </div>
+
+        <div id="domain_change" class="highlight">
+            <h1>Wondering how to transition from a non-technical domain to a technical one in IT industry?</h1>
+            <p>Do you want to set your career path in the software industry?</p>
+            <p>Are you aiming to land in a domain with high growth opportunities?</p>
+            <p>Don't know where to start?</p>
+        </div>
+	    <h4>Don't worry, you have landed at the right place!!!</h4>
+ 
+        <div id="register_webinar" class="highlight">
+            <h2>Join us for our free webinar happening this weekend where we will provide you with in-depth insights on how to choose the best domain in IT</h2>
+            <button onclick="location.href='webinar_link.html'" type="button">Enroll Webinar</button>
+        </div>
+    </div>
+    <script>
+        function highlightSection() {
+	    var sections = document.querySelectorAll('.content div, .content h2'); // Changed from h1 to div
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].classList.remove('highlight');
+            }
+            var hash = window.location.hash.substr(1);
+            if (hash) {
+                document.getElementById(hash).classList.add('highlight');
+            }
+        }
+	window.onload = highlightSection;
+	window.onhashchange = highlightSection;
+    </script>
+</body>
+</html>
+{% endblock %}

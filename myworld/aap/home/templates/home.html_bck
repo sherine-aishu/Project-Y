@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .gradient {
+            /* Create a linear gradient from top (white) to bottom (magenta) */
+            background: linear-gradient(to bottom, white, #cc99ff);
+            min-height: 100vh; /* This will make the div take up the full height of the viewport */
+        }
+        /* Rest of your CSS code */
+    </style>
+</head>
+<body>
+<div class="gradient">
+    <h1>Offerings</h1>
+    <!-- Rest of your HTML code -->
+</div>
+</body>
+</html>
+{% endblock %}
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LetzDevOpz</title>
+    <style>
+        body {
+            background-color: white;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: white;
+            color: black;
+            text-align: left;
+            padding: 10px;
+        }
+        header img {
+            height: 50px;
+            margin-right: 20px;
+        }
+        header h1 {
+            display: inline;  /* Make the h1 inline */
+            font-family: 'Forte Forward', Arial, sans-serif;  /* Change the font */
+            font-size: 2em;
+            font-style: italic;  /* Make the text italic */
+            font-weight: bold;  /* Make the text bold */
+            letter-spacing: 0.02em;
+        }
+        nav {
+            text-align: right;
+            padding-right: 20px;
+        }
+        nav a {
+            color: black;
+            text-decoration: none;
+        }
+        nav a:hover {
+            color: #D2D1CD; /* #66ddaa 50%, #80daeb */
+        }
+    </style>
+</head>
+<body>
+    {% load static %}
+    <header>
+        <img src="{% static 'she.png' %}" alt="Logo">
+        <h1><strong>L</strong>etz <strong>D</strong>ev<strong>O</strong>pz</h1>
+    </header>
+    <nav>
+        <a href="{% url 'home' %}">Home</a> |
+        <a href="{% url 'offerings' %}">Offerings</a> |
+        <a href="{% url 'contact_us' %}">Contact Us</a>
+    </nav>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
+

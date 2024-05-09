@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            /* Create a linear gradient from top (white) to bottom (pink) */
+            background: linear-gradient(to right, white 100%); /* #66ddaa , #80daeb */
+        }
+        .box {
+            border: 1px solid transparent;
+            padding: 20px;
+            margin: 20px 0;
+            /* Set the background color to pink */
+            background-color: pink;
+            /* Give the edges a slight curve */
+            border-radius: 10px;
+            /* width of box */
+	    width: 70%;
+	    /* Add a shadow effect */
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+<h1>Our Offerings</h1>
+
+<div class="box">
+    <h2>1. Jump Start Workshops</h2>
+    <p>Designed specifically for newbies and freshers, our 5-day, 10-hour workshops provide a comprehensive introduction to the IT industry. The workshops cover the following topics:</p>
+    <ul>
+        <li>Deconstructing Computer Architecture</li>
+        <li>Linux Outset</li>
+        <li>DevOps Outset</li>
+        <li>AWS Outset</li>
+        <li>Building a 3-Tier Web App</li>
+    </ul>
+    <p>Gain a solid foundation in IT essentials and take the first step towards a successful career in the tech industry.</p>
+</div>
+
+<div class="box">
+    <h2>2. Pivot Projects</h2>
+    <p>Looking for a domain change or skill upgrade? Our 5-day, 10-hour Pivot Projects are perfect for professionals seeking to enhance their skills. The projects cover the following topics:</p>
+    <ul>
+        <li>CI/CD setup using GitHub Actions</li>
+        <li>Hosting applications using Kubernetes</li>
+        <li>Monitoring end-to-end application using Prometheus and Grafana tools</li>
+        <li>Containerizing applications using Docker</li>
+        <li>Log monitoring using ELK</li>
+    </ul>
+    <p>Acquire hands-on experience and learn the latest trends in the IT industry to pivot your career towards high-growth domains.</p>
+</div>
+
+</body>
+</html>
+{% endblock %}
+
