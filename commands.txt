@@ -1,0 +1,11 @@
+[ec2-user@ip-172-31-36-148 ~]$ sudo su
+[root@ip-172-31-36-148 ec2-user]# pwd
+/home/ec2-user
+[root@ip-172-31-36-148 ec2-user]# ls
+myworld
+[root@ip-172-31-36-148 ec2-user]# cd myworld/
+[root@ip-172-31-36-148 myworld]# ls
+aap  bin  include  lib  lib64  pyvenv.cfg
+[root@ip-172-31-36-148 myworld]# cd aap/
+[root@ip-172-31-36-148 aap]# ls
+aap  db.sqlite3  home  manage.py  staticfiles
